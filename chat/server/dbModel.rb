@@ -24,8 +24,8 @@ class Message_container < ActiveRecord::Base
   end
 end
 
-mc = Message_container.new
-puts mc.get_msg_from(2)
+# mc = Message_container.new
+# puts mc.get_msg_from(2)
 # mc.push_msg('yossi', 'msg5')
 # Message_container.create(:message => 'msg2', :user_name=>'dani')
 # Message_container.create(:message => 'msg3', :user_name=>'moti')

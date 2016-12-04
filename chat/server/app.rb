@@ -13,12 +13,12 @@ MAX_CLIENTS = 50
 # set :views, settings.root + '/public'
 
 class App < Sinatra::Base
-  get '/fetchprev' do
+  post '/fetchprev' do
     mc = Message_container.new
     puts mc.get_msg_from(@params[:id])
     json_response = mc.get_msg_from(@params[:id]).to_json
     puts json_response.class
-    return(json_response)
+      return(json_response)
 
 # mc.push_msg('yossi', 'msg5')
 #     container = MessageContainer.new
@@ -42,7 +42,7 @@ class App < Sinatra::Base
     end
     clients.push(client_id)
     print clients
-    json_response = {container: client_id}
+    json_response = {myid: client_id}
     # 'hello client %s'%client_id
     return(json_response)
   end
