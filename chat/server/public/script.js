@@ -46,8 +46,8 @@ var Main = React.createClass({
     componentDidMount: function componentDidMount() {
         var component = this;
 
-        $.get(endpoint, function (data) {
-            component.setState(data);
+        $.getJSON(endpoint, function (data) {
+            component.setState({ data: data });
         });
     },
     // addCard: function addCard(loginToAdd) {
@@ -60,15 +60,16 @@ var Main = React.createClass({
 });
 
 var pollServerForNewMessages = function pollServerForNewMessages() {
-    $.ajax({
+    $.getJSON({
         type: 'POST',
         url: endpoint + 'fetchprev',
         dataType: 'json',
         cache: false,
         data: { id: 6 },
-        success: function (data) {
-            this.setState(data);
-            return React.createElement("div", null, data[0]);
+        success: function (poll) {
+            this.setState({ messages: poll });
+            return React.createElement("div", null, poll[0]);
+            console.info(this.state.poll);
         }.bind(this),
         error: function (xhr, status, err) {
             console.error(endpoint + 'fetchprev', status, err.toString());
@@ -82,19 +83,19 @@ var pollServerForNewMessages = function pollServerForNewMessages() {
 //         url: endpoint + 'fetchprev',
 //         data: {id: 6}
 //     },
-//         this.setState({ posts }));
+//         this.setState({ poll }));
 //
 //     render()
 //     {
 //         return React.createElement(
 //             "div",
 //             null,
-//             this.state.posts
+//             this.state.poll
 //         );
 //     }
 //
 // };
 
-// setInterval(pollServerForNewMessages, 15000);
+setInterval(pollServerForNewMessages, 5000);
 
 ReactDOM.render(React.createElement(Main, null), document.getElementById("root"));

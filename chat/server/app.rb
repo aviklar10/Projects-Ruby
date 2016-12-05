@@ -17,41 +17,27 @@ class App < Sinatra::Base
     mc = Message_container.new
     puts mc.get_msg_from(@params[:id])
     json_response = mc.get_msg_from(@params[:id]).to_json
-    puts json_response.class
-      return(json_response)
-
-# mc.push_msg('yossi', 'msg5')
-#     container = MessageContainer.new
-#     container.message = "second msg"
-#     # container.attributes = {  :message => container.message }
-#     container.date = "02:11:57"
-#     # container.message= "second msg"
-#     container.save
-#     # json_response = {container: container}
-#     # return(json_response)
-#     "suceeded"
-  end
-  clients = Array[]
-  get('/') do
-    print 'hi'
-    client_id = Random.rand(MAX_CLIENTS)
-    print client_id
-    while clients.include? client_id do
-      client_id = Random.rand(MAX_CLIENTS)
-      print client_id
-    end
-    clients.push(client_id)
-    print clients
-    json_response = {myid: client_id}
-    # 'hello client %s'%client_id
     return(json_response)
   end
+
+  clients = Array[]
+
+  get('/') do
+    client_id = Random.rand(MAX_CLIENTS)
+    while clients.include? client_id do
+      client_id = Random.rand(MAX_CLIENTS)
+    end
+    clients.push(client_id)
+    json_response = {myid: client_id}.to_json
+    return(json_response)
+  end
+
   get('/:id/send/:msg') do
     mc = Message_container.new
     json_response = mc.push_msg('user_%s'%@params[:id], @params[:msg])
     # mc.push_msg('client_%s'%@params[:id], 'bla bla')
     # json_response = %{you: #{@params[:msg]}}
-    return json_response
+    return {data:null}
   end
 
 
