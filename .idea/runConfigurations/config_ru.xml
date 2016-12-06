@@ -1,0 +1,21 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="config.ru" type="RackRunConfigurationType" factoryName="Rack" singleton="true">
+    <module name="Projects-Ruby" />
+    <RACK_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+    <RACK_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$MODULE_DIR$" />
+    <RACK_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="true" />
+    <RACK_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="ruby-2.3.1-p112" />
+    <RACK_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+    <envs />
+    <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+    <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+    <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov" />
+    <RACK_CONFIG_SETTINGS_ID NAME="PORT" VALUE="9292" />
+    <RACK_CONFIG_SETTINGS_ID NAME="IP" VALUE="127.0.0.1" />
+    <RACK_CONFIG_SETTINGS_ID NAME="CONFIG_FILE" VALUE="$MODULE_DIR$/../ruby/chat/server/config.ru" />
+    <RACK_CONFIG_SETTINGS_ID NAME="RACK_SERVER_TYPE" VALUE="Thin" />
+    <RACK_CONFIG_SETTINGS_ID NAME="BROWSER_URL" VALUE="http://127.0.0.1:9292" />
+    <RACK_CONFIG_SETTINGS_ID NAME="LAUNCH_JS" VALUE="false" />
+    <method />
+  </configuration>
+</component>
