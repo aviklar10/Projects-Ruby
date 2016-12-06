@@ -15,16 +15,21 @@ class Message_container < ActiveRecord::Base
     return %{#{user}: #{msg}}
   end
   def get_msg_from(prev_id)
-    res = Message_container.where('id > %d'%prev_id).unscope(:order).all
+    res = Message_container.where('id > %s'%prev_id).unscope(:order).all
     hash = Hash.new
     res.each do |r|
       hash[r.id] = %{#{r.user_name}: #{r.message}}
     end
     return hash
   end
+  def get_last_id()
+    return Message_container.maximum('id')
+  end
+
 end
 
 # mc = Message_container.new
+# print mc.get_last_id
 # puts mc.get_msg_from(2)
 # mc.push_msg('yossi', 'msg5')
 # Message_container.create(:message => 'msg2', :user_name=>'dani')

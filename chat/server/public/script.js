@@ -5,33 +5,12 @@
  */
 
 var endpoint = 'http://localhost:8080/';
-var Card = React.createClass({
-    displayName: "Card",
-
-    getInitialState: function getInitialState() {
-        return {};
-    },
-    componentDidMount: function componentDidMount() {
-        var component = this;
-
-        $.get(endpoint + ":id/send/:msg" + this.props.login, function (data) {
-            component.setState(data);
-        });
-    },
-    render: function render() {
-        return React.createElement("div", null);
-    }
-});
 
 var Form = React.createClass({
     displayName: "Form",
 
-    handleSubmit: function handleSubmit(e) {
-        e.preventDefault();
-        var idInput = this.refs.id;
-        this.props.addCard(idInput.value);
-        // idInput.value = '';
-    },
+    handleSubmit: function handleSubmit() {},
+
     render: function render() {
         return React.createElement("form", { onSubmit: this.handleSubmit }, React.createElement("input", { placeholder: "Type a message", ref: "login" }), React.createElement("button", null, "Send"));
     }
@@ -43,59 +22,123 @@ var Main = React.createClass({
     getInitialState: function getInitialState() {
         return { data: null };
     },
+
     componentDidMount: function componentDidMount() {
-        var component = this;
+        var that = this;
 
         $.getJSON(endpoint, function (data) {
-            component.setState({ data: data });
+            that.setState({ myId: data.myId, lastId: data.lastId });
         });
+        setInterval(that.pollServerForNewMessages, 5000);
     },
-    // addCard: function addCard(loginToAdd) {
-    //     this.setState({logins: this.state.logins.concat(loginToAdd)});
-    // },
+
+    pollServerForNewMessages: function pollServerForNewMessages() {
+        var that = this;
+        if (that.state.lastId) {
+            $.getJSON({
+                type: 'POST',
+                url: endpoint + 'fetchlastmsg',
+                dataType: 'json',
+                cache: false,
+                data: { id: this.state.lastId },
+                success: function success(messages) {
+                    that.setState({ messages: messages });
+
+                    console.info(that.state.messages);
+                },
+                error: function error(xhr, status, err) {
+                    console.error(endpoint + 'fetchlastmsg', status, err.toString());
+                }
+
+            });
+        }
+    },
+    getMessages: function getMessages() {
+        var messages = this.state.messages;
+        var markup = [];
+        if (messages) {
+            for (var index in messages) {
+                markup.push(React.createElement(
+                    "div",
+                    null,
+                    messages[index]
+                ));
+            }
+        }
+        return markup;
+    },
+    getMyId: function getMyId() {
+        var markup = null;
+
+        if (this.state.myId) {
+            markup = React.createElement(
+                "div",
+                null,
+                "Welcome user #",
+                this.state.myId
+            );
+        }
+
+        return markup;
+    },
+    onMessageSubmit: function onMessageSubmit() {
+        console.log(this.refs.myInput.value);
+        var that = this;
+        if (that.state.myId) {
+            $.getJSON({
+                type: 'POST',
+                url: endpoint + this.state.myId + '/sendmsg',
+                dataType: 'json',
+                cache: false,
+                data: { mymsg: that.refs.myInput.value },
+                success: function success() {
+                    that.pollServerForNewMessages;
+                    console.info(that.state.response);
+                    that.refs.myInput.value = '';
+                },
+                error: function error(xhr, status, err) {
+                    console.error(endpoint + 'fetchlastmsg', status, err.toString());
+                    that.refs.myInput.value = '';
+                }
+
+            });
+        }
+    },
+    getInput: function getInput() {
+        return React.createElement(
+            "div",
+            null,
+            React.createElement(
+                "form",
+                null,
+                React.createElement("input", { type: "text", placeholder: "please enter message", ref: "myInput", size: "70" }),
+                React.createElement(
+                    "button",
+                    { type: "submit", onClick: this.onMessageSubmit },
+                    "send"
+                )
+            )
+        );
+    },
+
+
     render: function render() {
-        if (!this.state.data) return null;
-        return React.createElement("div", null, "Hello ", this.state.data.myid);
+        return React.createElement(
+            "div",
+            null,
+            React.createElement(
+                "div",
+                null,
+                React.createElement(
+                    "h3",
+                    null,
+                    this.getMyId()
+                ),
+                this.getMessages()
+            ),
+            this.getInput()
+        );
     }
 });
-
-var pollServerForNewMessages = function pollServerForNewMessages() {
-    $.getJSON({
-        type: 'POST',
-        url: endpoint + 'fetchprev',
-        dataType: 'json',
-        cache: false,
-        data: { id: 6 },
-        success: function (poll) {
-            this.setState({ messages: poll });
-            return React.createElement("div", null, poll[0]);
-            console.info(this.state.poll);
-        }.bind(this),
-        error: function (xhr, status, err) {
-            console.error(endpoint + 'fetchprev', status, err.toString());
-        }.bind(this)
-    });
-};
-// var pollServerForNewMessages = function pollServerForNewMessages() {
-//     var component = this;
-//     $.ajax({
-//         type: 'POST',
-//         url: endpoint + 'fetchprev',
-//         data: {id: 6}
-//     },
-//         this.setState({ poll }));
-//
-//     render()
-//     {
-//         return React.createElement(
-//             "div",
-//             null,
-//             this.state.poll
-//         );
-//     }
-//
-// };
-
-setInterval(pollServerForNewMessages, 5000);
 
 ReactDOM.render(React.createElement(Main, null), document.getElementById("root"));

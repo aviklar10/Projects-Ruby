@@ -5,32 +5,11 @@
  */
 
 var endpoint = 'http://localhost:8080/';
-var Card = React.createClass({
-    displayName: "Card",
-
-    getInitialState: function getInitialState() {
-        return {};
-    },
-    componentDidMount: function componentDidMount() {
-        var component = this;
-
-        $.get(endpoint + ":id/send/:msg" + this.props.login, function (data) {
-            component.setState(data);
-        });
-    },
-    render: function render() {
-        return React.createElement("div", null);
-    }
-});
 
 var Form = React.createClass({
     displayName: "Form",
 
-    handleSubmit: function handleSubmit(e) {
-        e.preventDefault();
-        var idInput = this.refs.id;
-        this.props.addCard(idInput.value);
-        // idInput.value = '';
+    handleSubmit() {
     },
     render: function render() {
         return React.createElement(
@@ -50,71 +29,110 @@ var Main = React.createClass({
     displayName: "Main",
 
     getInitialState: function getInitialState() {
-        return {data:null}
+        return {data: null}
     },
+
     componentDidMount: function componentDidMount() {
-        var component = this;
+        var that = this;
 
         $.getJSON(endpoint, function (data) {
-            component.setState({data});
+            that.setState({myId: data.myId, lastId: data.lastId});
+
         });
+        setInterval(that.pollServerForNewMessages, 5000);
+
     },
-    // addCard: function addCard(loginToAdd) {
-    //     this.setState({logins: this.state.logins.concat(loginToAdd)});
-    // },
+
+    pollServerForNewMessages() {
+        var that = this;
+        if (that.state.lastId) {
+            $.getJSON({
+                type: 'POST',
+                url: endpoint + 'fetchlastmsg',
+                dataType: 'json',
+                cache: false,
+                data: {id: this.state.lastId},
+                success: function (messages) {
+                    that.setState({messages})
+
+                    console.info(that.state.messages)
+                },
+                error: function (xhr, status, err) {
+                    console.error(endpoint + 'fetchlastmsg', status, err.toString());
+                }
+
+
+            })
+        }
+
+    },
+    getMessages() {
+        var messages = this.state.messages;
+        var markup = [];
+        if (messages) {
+            for (var index in messages) {
+                markup.push(<div>{messages[index]}</div>)
+            }
+        }
+        return markup;
+    },
+
+    getMyId() {
+        var markup = null;
+
+        if (this.state.myId) {
+            markup = (<div>Welcome user #{this.state.myId}</div>);
+        }
+
+        return markup;
+    },
+
+    onMessageSubmit() {
+        console.log(this.refs.myInput.value);
+        var that = this;
+        if (that.state.myId) {
+            $.getJSON({
+                type: 'POST',
+                url: endpoint + this.state.myId + '/sendmsg',
+                dataType: 'json',
+                cache: false,
+                data: {mymsg: that.refs.myInput.value},
+                success: function () {
+                    that.pollServerForNewMessages
+                    console.info(that.state.response)
+                    that.refs.myInput.value='';
+                },
+                error: function (xhr, status, err) {
+                    console.error(endpoint + 'fetchlastmsg', status, err.toString());
+                    that.refs.myInput.value='';
+                },
+
+            })
+        }
+    },
+
+    getInput() {
+        return (
+            <div>
+                <input type="text" placeholder="please enter message" ref="myInput" size="70"></input>
+                <button type="submit" onClick={this.onMessageSubmit} >send</button>
+            </div>
+        );
+    },
+
     render: function render() {
-        if(!this.state.data
-        )
-        return null
-        return React.createElement(
-            "div",
-            null,
-            "Hello ",
-            this.state.data.myid
+        return (
+            <div>
+                <div>
+                    {<h3>{this.getMyId()}</h3>}
+                    {this.getMessages()}
+
+                </div>
+                {this.getInput()}
+            </div>
         );
     }
 });
 
-var pollServerForNewMessages = function pollServerForNewMessages() {
-    $.getJSON({
-        type: 'POST',
-        url: endpoint + 'fetchprev',
-        dataType: 'json',
-        cache: false,
-        data: {id: 6},
-        success: function (poll) {
-            this.setState({messages: poll})
-            return React.createElement(
-                "div",
-                null,
-                poll[0])
-        console.info(this.state.poll)
-        }.bind(this),
-        error: function (xhr, status, err) {
-            console.error(endpoint + 'fetchprev', status, err.toString());
-        }.bind(this)
-    });
-};
-// var pollServerForNewMessages = function pollServerForNewMessages() {
-//     var component = this;
-//     $.ajax({
-//         type: 'POST',
-//         url: endpoint + 'fetchprev',
-//         data: {id: 6}
-//     },
-//         this.setState({ poll }));
-//
-//     render()
-//     {
-//         return React.createElement(
-//             "div",
-//             null,
-//             this.state.poll
-//         );
-//     }
-//
-// };
-
-setInterval(pollServerForNewMessages, 5000);
 
 ReactDOM.render(React.createElement(Main, null), document.getElementById("root"));

@@ -13,7 +13,7 @@ MAX_CLIENTS = 50
 # set :views, settings.root + '/public'
 
 class App < Sinatra::Base
-  post '/fetchprev' do
+  post '/fetchlastmsg' do
     mc = Message_container.new
     puts mc.get_msg_from(@params[:id])
     json_response = mc.get_msg_from(@params[:id]).to_json
@@ -28,16 +28,24 @@ class App < Sinatra::Base
       client_id = Random.rand(MAX_CLIENTS)
     end
     clients.push(client_id)
-    json_response = {myid: client_id}.to_json
+    mc = Message_container.new
+    lastid = mc.get_last_id
+    json_response = {myId: client_id, lastId: lastid}.to_json
     return(json_response)
   end
 
-  get('/:id/send/:msg') do
-    mc = Message_container.new
-    json_response = mc.push_msg('user_%s'%@params[:id], @params[:msg])
-    # mc.push_msg('client_%s'%@params[:id], 'bla bla')
-    # json_response = %{you: #{@params[:msg]}}
-    return {data:null}
+  post('/:id/sendmsg') do
+    error = false
+    begin
+      mc = Message_container.new
+      json_response = mc.push_msg('user_%s'%@params[:id], @params[:mymsg])
+        # mc.push_msg('client_%s'%@params[:id], 'bla bla')
+        # json_response = %{you: #{@params[:msg]}}
+    rescue
+      error = true
+    end
+
+    return {data: error}
   end
 
 
