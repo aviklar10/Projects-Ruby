@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS `message_container` (
+  `id` INTEGER NOT NULL AUTO_INCREMENT,
+  `user_name` varchar(200) CHARACTER SET utf8 NOT NULL,
+  `date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  `message` TEXT NOT NULL ,
+
+  PRIMARY KEY (`id`)
+);
