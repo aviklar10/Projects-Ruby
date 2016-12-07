@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="79e4bd90-0dc2-4644-984e-948924b1b701" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/chat/server/my_test.rb" afterPath="" />
+    <list default="true" id="79e4bd90-0dc2-4644-984e-948924b1b701" name="Default" comment="remove unnecessary files from git.">
       <change type="DELETED" beforePath="$PROJECT_DIR$/chat/server/temp/Gemfile" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/chat/server/temp/Rakefile" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/chat/server/temp/active_record_test.rb" afterPath="" />
@@ -10,11 +9,9 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/chat/server/temp/chatServer_Sinatra.rb" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/chat/server/temp/config.ru" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/chat/server/temp/dbModel.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/chat/server/test_datamapper.rb" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/chat/server/tmp/single_page_app.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/chat/server/tmp/test.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/chat/server/tmp/yotam_script.jsx.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/chat/server/views/home.erb" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Projects-Ruby.iws" />
@@ -100,21 +97,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.erb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="home.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/chat/server/views/home.erb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
               <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="my_test.rb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/chat/server/my_test.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -275,16 +262,6 @@
               <option name="myItemId" value="Projects-Ruby1" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Projects-Ruby1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Projects-Ruby1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="chat" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -313,28 +290,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Projects-Ruby1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Projects-Ruby1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tmp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -627,7 +582,7 @@
       <workItem from="1480553321449" duration="29841000" />
       <workItem from="1480681684570" duration="59153000" />
       <workItem from="1480898213968" duration="25462000" />
-      <workItem from="1481077400025" duration="2629000" />
+      <workItem from="1481077400025" duration="3057000" />
     </task>
     <task id="LOCAL-00001" summary="ruby - server is almost ready&#10;react - client, not ready yet">
       <created>1480809129036</created>
@@ -706,11 +661,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481148520236</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="remove unnecessary files from git.">
+      <created>1481149503070</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1481149503070</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135644000" />
+    <option name="totallyTimeSpent" value="136072000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -813,19 +775,9 @@
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/chat/server/my_test.rb</url>
-          <line>8</line>
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="ruby-line">
           <url>file://C:/Ruby23/lib/ruby/gems/2.3.0/gems/mysql-2.9.1-x86-mingw32/lib/mysql.rb</url>
           <line>2</line>
           <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="ruby-line">
-          <url>file://$PROJECT_DIR$/chat/server/my_test.rb</url>
-          <line>2</line>
-          <option name="timeStamp" value="26" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://C:/Ruby23/lib/ruby/2.3.0/webrick/httpserver.rb</url>
@@ -1077,9 +1029,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="3" column="16" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#46#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1087,9 +1037,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1666">
           <caret line="100" column="82" selection-start-line="100" selection-start-column="82" selection-end-line="100" selection-end-column="82" />
-          <folding>
-            <element signature="e#15#61#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1196,9 +1144,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="3" column="24" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#46#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1295,14 +1241,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chat/server/views/home.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chat/server/test_datamapper.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1315,6 +1253,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat/server/views/home.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
           <folding />
         </state>
       </provider>
