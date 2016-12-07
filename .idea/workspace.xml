@@ -1,17 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="79e4bd90-0dc2-4644-984e-948924b1b701" name="Default" comment="remove unnecessary files from git.">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/chat/server/temp/Gemfile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/chat/server/temp/Rakefile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/chat/server/temp/active_record_test.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/chat/server/temp/chatServer.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/chat/server/temp/chatServer_Sinatra.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/chat/server/temp/config.ru" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/chat/server/temp/dbModel.rb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/chat/server/tmp/single_page_app.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/chat/server/tmp/test.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/chat/server/tmp/yotam_script.jsx.js" afterPath="" />
+    <list default="true" id="79e4bd90-0dc2-4644-984e-948924b1b701" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/chat/server/views/home.erb" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Projects-Ruby.iws" />
@@ -87,21 +78,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Config.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Config.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/chat/server/Config.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.erb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/chat/server/views/home.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -268,28 +249,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Projects-Ruby1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Projects-Ruby1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chat" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -582,7 +541,7 @@
       <workItem from="1480553321449" duration="29841000" />
       <workItem from="1480681684570" duration="59153000" />
       <workItem from="1480898213968" duration="25462000" />
-      <workItem from="1481077400025" duration="3057000" />
+      <workItem from="1481077400025" duration="3162000" />
     </task>
     <task id="LOCAL-00001" summary="ruby - server is almost ready&#10;react - client, not ready yet">
       <created>1480809129036</created>
@@ -668,11 +627,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481149503070</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="remove unnecessary files from git.">
+      <created>1481149937981</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1481149937981</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136072000" />
+    <option name="totallyTimeSpent" value="136177000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1225,14 +1191,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chat/server/Config.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1261,6 +1219,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat/server/Config.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
