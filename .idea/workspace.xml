@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79e4bd90-0dc2-4644-984e-948924b1b701" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Projects-Ruby.iml" afterPath="$PROJECT_DIR$/.idea/Projects-Ruby.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chat/server/Gemfile" afterPath="$PROJECT_DIR$/chat/server/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chat/server/Gemfile.lock" afterPath="$PROJECT_DIR$/chat/server/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chat/server/app.rb" afterPath="$PROJECT_DIR$/chat/server/app.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chat/server/config.ru" afterPath="$PROJECT_DIR$/chat/server/config.ru" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chat/server/dbModel.rb" afterPath="$PROJECT_DIR$/chat/server/dbModel.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chat/server/public/script.js" afterPath="$PROJECT_DIR$/chat/server/public/script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chat/server/public/script.jsx" afterPath="$PROJECT_DIR$/chat/server/public/script.jsx" />
     </list>
     <ignored path="Projects-Ruby.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -594,7 +586,7 @@
       <workItem from="1480553321449" duration="29841000" />
       <workItem from="1480681684570" duration="59153000" />
       <workItem from="1480898213968" duration="25462000" />
-      <workItem from="1481077400025" duration="178000" />
+      <workItem from="1481077400025" duration="200000" />
     </task>
     <task id="LOCAL-00001" summary="ruby - server is almost ready&#10;react - client, not ready yet">
       <created>1480809129036</created>
@@ -638,11 +630,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481008363783</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="done">
+      <created>1481077596776</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1481077596776</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133193000" />
+    <option name="totallyTimeSpent" value="133215000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -713,7 +712,8 @@
     <MESSAGE value="clean code a bit.&#10;'/' works&#10;'datafetch' - data retrieve but &quot;this setState is not a function&quot; issue.&#10;in addition need to perform the send message and create some forms." />
     <MESSAGE value="finshed to logic at the client&amp;server&#10;&#10;" />
     <MESSAGE value="add sal_script" />
-    <option name="LAST_COMMIT_MESSAGE" value="add sal_script" />
+    <MESSAGE value="done" />
+    <option name="LAST_COMMIT_MESSAGE" value="done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
