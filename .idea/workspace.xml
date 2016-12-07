@@ -18,6 +18,7 @@
     <SUITE FILE_PATH="coverage/Projects-Ruby@active_record_test.coverage" NAME="active_record_test Coverage Results" MODIFIED="1480692078793" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat/server" MODULE_NAME="Projects-Ruby" />
     <SUITE FILE_PATH="coverage/Projects-Ruby@my_test.coverage" NAME="my_test Coverage Results" MODIFIED="1480763198237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat/server" MODULE_NAME="Projects-Ruby" />
     <SUITE FILE_PATH="coverage/Projects-Ruby@app.coverage" NAME="app Coverage Results" MODIFIED="1480984236265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat/server" MODULE_NAME="Projects-Ruby" />
+    <SUITE FILE_PATH="coverage/Projects-Ruby1@app.coverage" NAME="app Coverage Results" MODIFIED="1481077661800" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat/server" MODULE_NAME="Projects-Ruby" />
     <SUITE FILE_PATH="coverage/Projects-Ruby@config_ru__4_.coverage" NAME="config.ru (4) Coverage Results" MODIFIED="1480672749731" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Projects-Ruby" />
     <SUITE FILE_PATH="coverage/Projects-Ruby@config_ru__1_.coverage" NAME="config.ru (1) Coverage Results" MODIFIED="1480756438655" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="Projects-Ruby" />
     <SUITE FILE_PATH="coverage/Projects-Ruby@dbModel.coverage" NAME="dbModel Coverage Results" MODIFIED="1480980510287" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/chat/server" MODULE_NAME="Projects-Ruby" />
@@ -76,21 +77,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/chat/server/app.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="68">
+              <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dbModel.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dbModel.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chat/server/dbModel.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+            <state relative-caret-position="96">
+              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -324,7 +325,7 @@
       <recent name="C:\work\Projects-Ruby" />
     </key>
   </component>
-  <component name="RunManager" selected="Ruby.dbModel">
+  <component name="RunManager" selected="Ruby.app">
     <configuration default="false" name="dbModel" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
       <module name="Projects-Ruby" />
       <RUBY_RUN_CONFIG NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -586,7 +587,7 @@
       <workItem from="1480553321449" duration="29841000" />
       <workItem from="1480681684570" duration="59153000" />
       <workItem from="1480898213968" duration="25462000" />
-      <workItem from="1481077400025" duration="200000" />
+      <workItem from="1481077400025" duration="341000" />
     </task>
     <task id="LOCAL-00001" summary="ruby - server is almost ready&#10;react - client, not ready yet">
       <created>1480809129036</created>
@@ -637,11 +638,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481077596776</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="done - need to improve styling and force the enter key to send messages to.">
+      <created>1481077640968</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1481077640968</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133215000" />
+    <option name="totallyTimeSpent" value="133356000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -713,7 +721,8 @@
     <MESSAGE value="finshed to logic at the client&amp;server&#10;&#10;" />
     <MESSAGE value="add sal_script" />
     <MESSAGE value="done" />
-    <option name="LAST_COMMIT_MESSAGE" value="done" />
+    <MESSAGE value="done - need to improve styling and force the enter key to send messages to." />
+    <option name="LAST_COMMIT_MESSAGE" value="done - need to improve styling and force the enter key to send messages to." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1173,14 +1182,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chat/server/app.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chat/server/tmp/yotam_script.jsx.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1254,8 +1255,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/chat/server/dbModel.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+        <state relative-caret-position="96">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chat/server/app.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
           <folding />
         </state>
       </provider>
