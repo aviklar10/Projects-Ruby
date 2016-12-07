@@ -39,7 +39,7 @@ var Main = React.createClass({
             that.setState({myId: data.myId, lastId: data.lastId});
 
         });
-        setInterval(that.pollServerForNewMessages, 5000);
+        setInterval(that.pollServerForNewMessages, 2500);
 
     },
 

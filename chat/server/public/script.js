@@ -29,7 +29,7 @@ var Main = React.createClass({
         $.getJSON(endpoint, function (data) {
             that.setState({ myId: data.myId, lastId: data.lastId });
         });
-        setInterval(that.pollServerForNewMessages, 5000);
+        setInterval(that.pollServerForNewMessages, 2500);
     },
 
     pollServerForNewMessages: function pollServerForNewMessages() {
@@ -108,15 +108,11 @@ var Main = React.createClass({
         return React.createElement(
             "div",
             null,
+            React.createElement("input", { type: "text", placeholder: "please enter message", ref: "myInput", size: "70" }),
             React.createElement(
-                "form",
-                null,
-                React.createElement("input", { type: "text", placeholder: "please enter message", ref: "myInput", size: "70" }),
-                React.createElement(
-                    "button",
-                    { type: "submit", onClick: this.onMessageSubmit },
-                    "send"
-                )
+                "button",
+                { type: "submit", onClick: this.onMessageSubmit },
+                "send"
             )
         );
     },

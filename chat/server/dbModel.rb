@@ -1,10 +1,12 @@
+#!/usr/bin/ruby
 require 'rubygems'
 require 'active_record'
+require '../server/Config'
 ActiveRecord::Base.establish_connection(
     :adapter=> "mysql2",
     :username=> "admin",
     :password=> "1234",
-    :host => "localhost",
+    :host => CLEARDB_DATABASE_URL,
     :database=> "chatdb"
 )
 

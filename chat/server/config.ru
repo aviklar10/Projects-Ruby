@@ -5,7 +5,7 @@ require 'bundler'
 require 'bundler/setup'
 Bundler.require
 use Rack::Session::Cookie, secret: 'dev_secret'
-require ::File.expand_path('../app',  __FILE__)
-# require './app'
+# require ::File.expand_path('../app',  __FILE__)
+require './app'
 run App
 
